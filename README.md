@@ -303,9 +303,27 @@ To run the project, make sure you have Docker and Docker Compose installed. Then
 ```bash
 docker-compose up
 ```
+### Docker Container
+
+Docker Container:
+!["docker_container"](assets/docker_container.jpg "")
+
+### API
+
+Example kafka Api:
+!["Example_kafka_api"](assets/Example_kafka_api.jpg "")
+
+### Confluent
+
+Example kafka Api:
+!["confluent_message_received_from_api"](assets/confluent_message_received_from_api.jpg "")
+
+
 
 ### Links
 
+
+!["Confluent"](assets/confluent.jpg "")
 Confluent:
 
 [http://localhost:9021/clusters/mSEmqTIBQUaeBIzzAC7bgg/management/topics/ExampleKafkaTopic/message-viewer](http://localhost:9021/clusters/mSEmqTIBQUaeBIzzAC7bgg/management/topics/ExampleKafkaTopic/message-viewer)
