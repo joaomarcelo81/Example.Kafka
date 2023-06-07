@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Kafka.Domain", "src\Example.Kafka.Domain\Example.Kafka.Domain.csproj", "{F4A59446-B2C3-4C41-B433-E3E4F1E4F82A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Kafka.Infra.Data", "src\Example.Kafka.Infra.Data\Example.Kafka.Infra.Data.csproj", "{E8A68522-2CB8-4B7B-8966-706D9D8210E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Kafka.Api", "src\Example.Kafka.Api\Example.Kafka.Api.csproj", "{9172AE0A-1738-49E2-9B6B-54D773ACA365}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Kafka.Application", "src\Example.Kafka.Application\Example.Kafka.Application.csproj", "{F0F00897-99EC-422A-B9FE-2A40FDA4475E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Kafka.Handler", "src\Example.Kafka.Handler\Example.Kafka.Handler.csproj", "{BF430F23-0BFF-433B-89CD-C7EF8E6455B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{7BB843D2-9AFC-4376-8AF0-3A61BAE1BDF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{89EBFD72-D986-4756-A20E-6A786889A3BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{759BE091-B1E4-44BF-9BF2-1BBD9E1EBBD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{55806A40-6AE0-45DF-BF28-9E501FE677F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{22127CDD-06E5-4D5E-9BC6-93113ED3BA13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{FFA829A8-9447-456D-8E56-E0DC4C36F03F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Test", "5 - Test", "{CFBA4998-CEA2-4C01-9317-18AC26E4C690}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer", "Consumer", "{EF9D1D4D-FA14-46EA-B726-5FF071936E20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Producer", "Producer", "{7B380397-CE27-4668-B8C7-8E6467F3EB08}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Kafka.Ui", "src\Example.Kafka.Ui\Example.Kafka.Ui.csproj", "{9FDB3D74-670B-48D5-B00D-4E60E3B588E1}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CDD1E44C-B890-4738-AD92-A9FBE1047857}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A59446-B2C3-4C41-B433-E3E4F1E4F82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A59446-B2C3-4C41-B433-E3E4F1E4F82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A59446-B2C3-4C41-B433-E3E4F1E4F82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A59446-B2C3-4C41-B433-E3E4F1E4F82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A68522-2CB8-4B7B-8966-706D9D8210E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A68522-2CB8-4B7B-8966-706D9D8210E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A68522-2CB8-4B7B-8966-706D9D8210E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A68522-2CB8-4B7B-8966-706D9D8210E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9172AE0A-1738-49E2-9B6B-54D773ACA365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9172AE0A-1738-49E2-9B6B-54D773ACA365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9172AE0A-1738-49E2-9B6B-54D773ACA365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9172AE0A-1738-49E2-9B6B-54D773ACA365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F00897-99EC-422A-B9FE-2A40FDA4475E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F00897-99EC-422A-B9FE-2A40FDA4475E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F00897-99EC-422A-B9FE-2A40FDA4475E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F00897-99EC-422A-B9FE-2A40FDA4475E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF430F23-0BFF-433B-89CD-C7EF8E6455B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF430F23-0BFF-433B-89CD-C7EF8E6455B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF430F23-0BFF-433B-89CD-C7EF8E6455B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF430F23-0BFF-433B-89CD-C7EF8E6455B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FDB3D74-670B-48D5-B00D-4E60E3B588E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FDB3D74-670B-48D5-B00D-4E60E3B588E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FDB3D74-670B-48D5-B00D-4E60E3B588E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FDB3D74-670B-48D5-B00D-4E60E3B588E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD1E44C-B890-4738-AD92-A9FBE1047857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD1E44C-B890-4738-AD92-A9FBE1047857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD1E44C-B890-4738-AD92-A9FBE1047857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD1E44C-B890-4738-AD92-A9FBE1047857}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4A59446-B2C3-4C41-B433-E3E4F1E4F82A} = {759BE091-B1E4-44BF-9BF2-1BBD9E1EBBD0}
+		{E8A68522-2CB8-4B7B-8966-706D9D8210E1} = {22127CDD-06E5-4D5E-9BC6-93113ED3BA13}
+		{9172AE0A-1738-49E2-9B6B-54D773ACA365} = {7B380397-CE27-4668-B8C7-8E6467F3EB08}
+		{F0F00897-99EC-422A-B9FE-2A40FDA4475E} = {89EBFD72-D986-4756-A20E-6A786889A3BF}
+		{BF430F23-0BFF-433B-89CD-C7EF8E6455B6} = {EF9D1D4D-FA14-46EA-B726-5FF071936E20}
+		{EF9D1D4D-FA14-46EA-B726-5FF071936E20} = {7BB843D2-9AFC-4376-8AF0-3A61BAE1BDF5}
+		{7B380397-CE27-4668-B8C7-8E6467F3EB08} = {7BB843D2-9AFC-4376-8AF0-3A61BAE1BDF5}
+		{9FDB3D74-670B-48D5-B00D-4E60E3B588E1} = {7BB843D2-9AFC-4376-8AF0-3A61BAE1BDF5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9462FA61-63D2-472D-9CCC-B07AF58D54B9}
+	EndGlobalSection
+EndGlobal
