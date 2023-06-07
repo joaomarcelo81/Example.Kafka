@@ -16,13 +16,13 @@ namespace Example.Kafka.Handler.Handlers
             var conf = new ConsumerConfig
             {
                 GroupId = "test-consumer-group",
-                BootstrapServers = "localhost:9092",
+                BootstrapServers = "kafka:29092",
                 AutoOffsetReset = AutoOffsetReset.Earliest
             };
 
             using (var c = new ConsumerBuilder<Ignore, string>(conf).Build())
             {
-                c.Subscribe("fila_pedido");
+                c.Subscribe("ExampleKafkaTopic");
                 var cts = new CancellationTokenSource();
 
                 try

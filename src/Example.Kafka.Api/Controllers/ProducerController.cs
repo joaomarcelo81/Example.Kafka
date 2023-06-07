@@ -32,60 +32,38 @@ namespace Example.Kafka.Api.Controllers
                                                      // SaslUsername = "<OCI_tenancy_name>/<your_OCI_username>/<stream_pool_OCID>",
                                                      //SaslPassword = "<your_OCI_user_auth_token>", // use the auth-token you created step 5 of Prerequisites section 
             };
-            Produce("fila_pedido", config);
-            //using (var producer = new ProducerBuilder<Null, string>(config).Build())
-            //{
-            //    try
-            //    {
-            //        var sendResult = producer.ProduceAsync("fila_pedido", new Message<Null, string> { Value = message })/*.ConfigureAwait(false);*/
-            //                                .GetAwaiter()
-            //                                .GetResult();
-
-            //                        // return "OK";
-            //        return $"Mensagem '{sendResult.Value}' de '{sendResult.TopicPartitionOffset}'";
-            //    }
-            //    catch (ProduceException<Null, string> e)
-            //    {
-            //        Console.WriteLine($"Delivery failed: {e.Error.Reason}");
-            //    }
-            //}
+            Produce("ExampleKafkaTopic", config, message);            
 
             return string.Empty;
         }
 
 
 
-        static void Produce(string topic, ClientConfig config)
+        static void Produce(string topic, ClientConfig config, string message)
         {
             using (var producer = new ProducerBuilder<string, string>(config).Build())
             {
-                int numProduced = 0;
-                int numMessages = 5000;
-                for (int i = 0; i < numMessages; ++i)
-                {
-                    var key = "API_messageKey" + i;
-                    var val = "API_messageVal" + i;
+                var key = Guid.NewGuid().ToString();
+                var val = message;
+                Console.WriteLine($"Producing record: {key} {val}");
 
-                    Console.WriteLine($"Producing record: {key} {val}");
-
-                    producer.Produce(topic, new Message<string, string> { Key = key, Value = val },
-                        (deliveryReport) =>
+                producer.Produce(topic, new Message<string, string> { Key = key, Value = val },
+                    (deliveryReport) =>
+                    {
+                        if (deliveryReport.Error.Code != ErrorCode.NoError)
                         {
-                            if (deliveryReport.Error.Code != ErrorCode.NoError)
-                            {
-                                Console.WriteLine($"Failed to deliver message: {deliveryReport.Error.Reason}");
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Produced message to: {deliveryReport.TopicPartitionOffset}");
-                                numProduced += 1;
-                            }
-                        });
-                }
+                            Console.WriteLine($"Failed to deliver message: {deliveryReport.Error.Reason}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Produced message to: {deliveryReport.TopicPartitionOffset}");                            
+                        }
+                    });
+
 
                 producer.Flush(TimeSpan.FromSeconds(10));
 
-                Console.WriteLine($"{numProduced} messages were produced to topic {topic}");
+                Console.WriteLine($"The message were produced to topic {topic}");
             }
         }
 
